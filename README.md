@@ -3,4 +3,4 @@
 [![Checkstyle](https://img.shields.io/github/actions/workflow/status/FakeStu/MTSS-RomanNumber-ASCII-Art/build.yml?label=Checkstyle)](https://FakeStu.github.io/MTSS-RomanNumber-ASCII-Art/checkstyle.html)
 
 // Angelo Tuoni 2116405\
-// Mattia Oliva Medin 2103471\
+// Mattia Oliva Medin 2103471
