@@ -156,7 +156,7 @@
         <artifactId>maven-site-plugin</artifactId>
         <version>3.7.1</version>
         <configuration>
-          <siteUrl>https://solgio.github.io/Test</siteUrl>
+          <siteUrl>https://github.com/FakeStu/MTSS-RomanNumber-ASCII-Art</siteUrl>
           <!-- Use the modern Maven Fluido Skin -->
           <skin>
             <groupId>org.apache.maven.skins</groupId>
