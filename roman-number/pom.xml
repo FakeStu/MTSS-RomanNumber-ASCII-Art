@@ -83,7 +83,7 @@
         <version>3.3.1</version>
         <configuration>
           <failsOnError>true</failsOnError>
-          <configLocation>checkstyle.xml</configLocation>
+          <configLocation>config/checkstyle.xml</configLocation>
           <consoleOutput>true</consoleOutput>
         </configuration>
         <executions>
@@ -149,28 +149,28 @@
           </jacocoReports>
         </configuration>
       </plugin>
+
+      <!-- Site -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-site-plugin</artifactId>
+        <version>3.7.1</version>
+        <configuration>
+          <siteUrl>https://solgio.github.io/Test</siteUrl>
+          <!-- Use the modern Maven Fluido Skin -->
+          <skin>
+            <groupId>org.apache.maven.skins</groupId>
+            <artifactId>maven-fluido-skin</artifactId>
+            <version>1.9</version>
+          </skin>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <artifactId>maven-project-info-reports-plugin</artifactId>
+        <version>3.4.2</version> <!-- Use the latest version -->
+      </plugin>
     </plugins>
-
-    <!-- Site -->
-    <plugin>
-      <groupId>org.apache.maven.plugins</groupId>
-      <artifactId>maven-site-plugin</artifactId>
-      <version>3.7.1</version>
-      <configuration>
-        <siteUrl>https://solgio.github.io/Test</siteUrl>
-        <!-- Use the modern Maven Fluido Skin -->
-        <skin>
-          <groupId>org.apache.maven.skins</groupId>
-          <artifactId>maven-fluido-skin</artifactId>
-          <version>1.9</version>
-        </skin>
-      </configuration>
-    </plugin>
-
-    <plugin>
-      <artifactId>maven-project-info-reports-plugin</artifactId>
-      <version>3.4.2</version> <!-- Use the latest version -->
-    </plugin>
   </build>
 
   <reporting>
@@ -181,10 +181,10 @@
         <version>3.3.1</version>
         <configuration>
           <failsOnError>false</failsOnError>
-          <configLocation>checkstyle.xml</configLocation>
+          <configLocation>config/checkstyle.xml</configLocation>
           <consoleOutput>true</consoleOutput>
           <outputDirectory>${project.build.directory}/site</outputDirectory>
-          <outputFile>checkstyle.html</outputFile>
+          <outputFile>config/checkstyle.html</outputFile>
           <format>html</format>
         </configuration>
       </plugin>
