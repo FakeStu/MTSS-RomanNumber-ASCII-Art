@@ -13,9 +13,8 @@ package it.unipd.mtss;
     private static String printAsciiArt(String romanNumber) {
 <span class="fc" id="L14">        StringBuilder asciiArt = new StringBuilder();</span>
     
-        // Definisci la rappresentazione ASCII art orizzontale per ogni lettera romana
-<span class="fc" id="L17">        String[][] asciiLetters = {</span>
-            {//Riga1
+<span class="fc" id="L16">        String[][] asciiLetters = {</span>
+            {
                 &quot;  __  __ &quot;, // M
                 &quot;  _____  &quot;,  // D
                 &quot;   _____ &quot;,  // C
@@ -25,7 +24,7 @@ package it.unipd.mtss;
                 &quot;  _____ &quot; // I
             },
 
-            {//Riga2
+            {
                 &quot; |  \\/  |&quot;, // M
                 &quot; |  __ \\ &quot;,  // D
                 &quot;  / ____|&quot;,  // C
@@ -35,7 +34,7 @@ package it.unipd.mtss;
                 &quot; |_   _|&quot; // I
             },
 
-            {//Riga3
+            {
                 &quot; | \\  / |&quot;, // M
                 &quot; | |  | |&quot;,  // D
                 &quot; | |     &quot;,  // C
@@ -45,7 +44,7 @@ package it.unipd.mtss;
                 &quot;   | |  &quot; // I
             },
 
-            {//Riga4
+            {
                 &quot; | |\\/| |&quot;, // M
                 &quot; | |  | |&quot;, // D
                 &quot; | |     &quot;, // C
@@ -55,7 +54,7 @@ package it.unipd.mtss;
                 &quot;   | |  &quot; // I
             },
                 
-            {//Riga5
+            {
                 &quot; | |  | |&quot;, // M
                 &quot; | |__| |&quot;, // D
                 &quot; | |____ &quot;, // C
@@ -65,7 +64,7 @@ package it.unipd.mtss;
                 &quot;  _| |_ &quot; // I
             },
                 
-            {//Riga6
+            {
                 &quot; |_|  |_|&quot;, // M
                 &quot; |_____/ &quot;, // D
                 &quot;  \\_____|&quot;, // C
@@ -76,14 +75,13 @@ package it.unipd.mtss;
             },
         };
         
-<span class="fc bfc" id="L79" title="All 2 branches covered.">        for( int z=0; z&lt;6; z++) {</span>
-<span class="fc bfc" id="L80" title="All 2 branches covered.">            for (char c : romanNumber.toCharArray()) {</span>
-                // Aggiungi la rappresentazione ASCII art orizzontale della lettera corrente
-<span class="fc" id="L82">                asciiArt.append(asciiLetters[z][&quot;MDCLXVI&quot;.indexOf(c)]);</span>
+<span class="fc bfc" id="L78" title="All 2 branches covered.">        for( int z=0; z&lt;6; z++) {</span>
+<span class="fc bfc" id="L79" title="All 2 branches covered.">            for (char c : romanNumber.toCharArray()) {</span>
+<span class="fc" id="L80">                asciiArt.append(asciiLetters[z][&quot;MDCLXVI&quot;.indexOf(c)]);</span>
             }
-<span class="fc" id="L84">            asciiArt.append(&quot;\n&quot;);</span>
+<span class="fc" id="L82">            asciiArt.append(&quot;\n&quot;);</span>
         }
-<span class="fc" id="L86">        return asciiArt.toString();</span>
+<span class="fc" id="L84">        return asciiArt.toString();</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>

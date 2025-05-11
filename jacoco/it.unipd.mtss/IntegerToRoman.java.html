@@ -6,25 +6,18 @@ package it.unipd.mtss;
 
 <span class="nc" id="L7">public class IntegerToRoman {</span>
     public static String convert(int number) {
-<span class="pc bpc" id="L9" title="2 of 4 branches missed.">        if (number &lt; 1 || number &gt; 1000) {</span>
-<span class="nc" id="L10">            throw new IllegalArgumentException(&quot;Il numero deve essere compreso tra 1 e 1000&quot;);</span>
-        }
+<span class="fc" id="L9">        String[] romanLetters = {&quot;M&quot;, &quot;CM&quot;, &quot;D&quot;, &quot;CD&quot;, &quot;C&quot;, &quot;XC&quot;, &quot;L&quot;, &quot;XL&quot;, &quot;X&quot;, &quot;IX&quot;, &quot;V&quot;, &quot;IV&quot;, &quot;I&quot;};</span>
+<span class="fc" id="L10">        int[] values = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};</span>
 
-        // Definizione delle lettere romane e dei loro valori corrispondenti
-<span class="fc" id="L14">        String[] romanLetters = {&quot;M&quot;, &quot;CM&quot;, &quot;D&quot;, &quot;CD&quot;, &quot;C&quot;, &quot;XC&quot;, &quot;L&quot;, &quot;XL&quot;, &quot;X&quot;, &quot;IX&quot;, &quot;V&quot;, &quot;IV&quot;, &quot;I&quot;};</span>
-<span class="fc" id="L15">        int[] values = {1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};</span>
-
-<span class="fc" id="L17">        StringBuilder romanNumber = new StringBuilder();</span>
-
-        // Itera attraverso i valori romani e aggiungi le lettere corrispondenti
-<span class="fc bfc" id="L20" title="All 2 branches covered.">        for (int i = 0; i &lt; values.length; i++) {</span>
-<span class="fc bfc" id="L21" title="All 2 branches covered.">            while (number &gt;= values[i]) {</span>
-<span class="fc" id="L22">                number -= values[i];</span>
-<span class="fc" id="L23">                romanNumber.append(romanLetters[i]);</span>
+<span class="fc" id="L12">        StringBuilder romanNumber = new StringBuilder();</span>
+<span class="fc bfc" id="L13" title="All 2 branches covered.">        for (int i = 0; i &lt; values.length; i++) {</span>
+<span class="fc bfc" id="L14" title="All 2 branches covered.">            while (number &gt;= values[i]) {</span>
+<span class="fc" id="L15">                number -= values[i];</span>
+<span class="fc" id="L16">                romanNumber.append(romanLetters[i]);</span>
             }
         }
 
-<span class="fc" id="L27">        return romanNumber.toString();</span>
+<span class="fc" id="L20">        return romanNumber.toString();</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>
